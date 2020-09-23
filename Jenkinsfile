@@ -8,7 +8,7 @@ pipeline {
         stage('Docker Image Creation') {
             steps {
                 sh "sudo docker build -t satyendra207/tomcat:${BUILD_NUMBER} ."
-                sh "sudo docker run -i satyendra207/tomcat:${BUILD_NUMBER} -p 8090:8080"
+                sh "sudo docker run -t satyendra207/tomcat:${BUILD_NUMBER} -p 8090:8080"
             }
 	}
        
